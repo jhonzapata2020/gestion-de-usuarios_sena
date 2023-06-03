@@ -89,15 +89,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/materialize-css/dist/js/materialize.min.js"
-            ]
+            "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "73643b36-7218-47f6-b02c-eb268f44a46c"
   }
 }

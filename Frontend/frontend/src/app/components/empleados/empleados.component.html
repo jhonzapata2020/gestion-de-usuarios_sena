@@ -1,0 +1,52 @@
+
+<div class="container container-center">
+    <div class="row">
+      <div class="col s12 m3">
+        <!-- Sidenav -->
+        <ul class="sidenav" id="mobile-nav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="path-to-image" alt="Background Image">
+              </div>
+              <a href="#"><img class="circle" src="path-to-profile-image" alt="Profile Image"></a>
+              <a href="#"><span class="white-text name">John Doe</span></a>
+              <a href="#"><span class="white-text email">johndoe@example.com</span></a>
+            </div>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col s12 m9">
+        <div class="card">
+          <div class="card-content">
+            <h3 class="form-title">Formulario de Registro</h3>
+            <form #empleadoForm="ngForm" (ngSubmit)="agregarEmpleado(empleadoForm)">
+              <div class="row">                            
+                <div class="input-field col s12 m8">
+                  <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.firstName" placeholder="Ingrese su primer nombre">
+                </div>
+                <div class="input-field col s12">
+                  <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.lastName" placeholder="Ingrese su primer apellido">
+                </div>
+                <div class="input-field col s12">
+                  <input type="email" name="email" #email="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.email" placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="card-action">
+                  <div class="input-field col s12 button-container">
+                    <button class="btn" (click)="resetForm(empleadoForm)">Limpiar</button>
+                    <button class="btn">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
